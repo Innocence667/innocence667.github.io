@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
-    <meta name="description" content="" />
+    <meta name="description" content="friends" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Innocence的后花园 | </title>
 
@@ -19,6 +19,10 @@
 <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/fonts.css">
  
             <!--注意：首页既不是post也不是page-->
+            
+                
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/waline.css">
+
             
         
     
@@ -62,7 +66,7 @@
             
         
             
-                <li><i><a style="color: #4e7dde;" href="/categories/">分类</a></i></li>
+                <li><a href="/categories/">分类</a></li>
             
         
             
@@ -77,34 +81,68 @@
 
                     
                     
-                        <div class="archive-list">
-  <ul class="archive">
-
-    
-    <span>🔖<i>Changelog</i></span>
-      
-      
-      
-          
-    
-    
-  
-    
-        <li>
-          <span class="archive-date">2024/03/26</span>
-          <div class="archive-main">
-              <a class="archive-title" href="/2024/03/26/%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E5%B7%B2%E4%B8%8A%E7%BA%BF%EF%BC%81/">评论系统已上线！</a>
-          </div>
-        </li>
-    
-  
-  </ul>
-</div>
-
- 
-                    
                     
                     <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+
+    <div class="post-md">
+        
+        <p>（空空如也）</p>
+<p>欢迎想挂友链的朋友们~</p>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+        </i>
+    </div>
+    
+        
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上。 
+    </div>
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'vercel-waline-henna.vercel.app',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: false, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: '正确的邮箱地址，回复将能得到邮件通知。', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+    </div>
+
+
+     
+</div>
+
+
+
                     
                     
                     <div class="footer">
