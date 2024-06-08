@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="评论系统已上线！" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
-    <title>Innocence的后花园 | </title>
+    <title>Innocence的后花园</title>
 
     
         
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/highlight/style1.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
+
             
 <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/reset.css">
 
@@ -24,17 +32,55 @@
 <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/waline.css">
 
             
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/ui.css">
+ 
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/style.css">
+
+    
+            <!--返回顶部css-->
+            
+                
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/returnToTop.css">
+
+                
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/unicons.css">
+
+            
+            
+                <!--目录-->
+                
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/toc.css">
+
+            
+
         
     
+
     
-<link rel="stylesheet" href="/css/ui.css">
- 
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
     
-<link rel="stylesheet" href="/css/style.css">
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
 
 <meta name="generator" content="Hexo 6.3.0"></head>
     
+    
+    
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
         <div class="paper">
             
             
@@ -42,6 +88,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -95,16 +143,19 @@
 
     <div class="post-md">
         
-            
-        
-        <p>经过一番看似麻烦其实无比简单的折腾，终于给网站实装了评论系统。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><p>经过一番看似麻烦其实无比简单的折腾，终于给网站实装了评论系统。</p>
 <p>目前评论系统还不支持发送邮件通知功能，<del>咕咕咕</del>我会尽快完善。</p>
 <hr>
 <p>一些想说的话：</p>
 <p>之前我曾说过，我在去年4月就已经有了搭建博客的想法，之所以拖到今年1月才Hello world， 一大原因是我希望在hello world的同时就配置好评论。我个人有点完美主义，这倒不是大问题。问题出在这里：配置评论的尝试最早也可以追溯到去年5月，经过我这两天的摸索，才惊觉去年5月的尝试就已完成了配置评论区的90%工作，当时只是卡在最后一步（将评论服务器的链接加到主题配置的yaml文件里，就这么简单一步，却把我卡住了）。如果我当时肯耐心查看各种文档，这个博客大概在去年5月份就已经和大家见面了。而我拖到现在，配置时反倒给自己多增添了麻烦：Leancloud因为30天未使用，自动把我的资源归档了，我还以为是Vercel的问题，又查了些资料才解决，多花了不少时间。</p>
 <p>写下这些，谨以此提醒自己，勿浅尝辄止，功亏一篑。<strong>须知，行百里者半九十。</strong></p>
 <p>————Innocence 于2024.3.26</p>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -128,13 +179,21 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
     <div class="comments-container">
     <div id="comment-anchor"></div>
     <div class="comment-area-title">
-        以上。 
+        以上 
     </div>
+    
         
 
     <div id="waline"></div>
@@ -153,7 +212,7 @@
                 comment: false, // 评论数统计
 
                 locale: {
-                    placeholder: '正确的邮箱地址，回复将能得到邮件通知。', 
+                    placeholder: '留下你的评论吧。', 
                     sofa: ''
                 },
             });
@@ -163,6 +222,10 @@
     </script>
 
 
+
+    
+    
+    
     </div>
 
 
@@ -171,6 +234,7 @@
 
 
 
+                                      
                     
                     
                     <div class="footer">
@@ -201,21 +265,60 @@
 
     
         
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
-
-        
 <script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script>
 
         
 <script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script>
 
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/randomHeaderContent.js"></script>
+
+        <!--回到顶部按钮-->
+        
+            
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+            
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/returnToTop.js"></script>
+
+        
+    
+        <!--目录-->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+            
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/toc.js"></script>
+
+        
+
     
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
                 </div>
             
     </body>
