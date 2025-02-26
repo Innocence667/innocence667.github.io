@@ -24,6 +24,10 @@
  
          <!--注意：首页既不是post也不是page-->
         
+            
+<link rel="stylesheet" href="/css/waline.css">
+
+        
         
         
 <link rel="stylesheet" href="/css/ui.css">
@@ -122,6 +126,18 @@
                 border-radius: 50%; 
             }
             
+            .header-img:hover {
+                animation: rotateAnimation 2s linear infinite; /* 悬停旋转动画 */
+            }
+            @keyframes rotateAnimation {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            
         </style>
         <img 
             alt="^-^" 
@@ -144,6 +160,18 @@
         
             
                 <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+            
+                <li><i>
+                    
+                        <a style="color: #4e7dde;" href="/about/">关于</a>
+                    
+                </i></li>
             
         
     </ul>
@@ -169,7 +197,7 @@
             
         
         <div class=".article-gallery"><p>Contact me:</p>
-<p>E-mail: <a href="mailto:&#x69;&#110;&#x6e;&#111;&#x63;&#x65;&#110;&#99;&#x65;&#54;&#x36;&#x37;&#x37;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x69;&#110;&#x6e;&#111;&#x63;&#x65;&#110;&#99;&#x65;&#54;&#x36;&#x37;&#x37;&#x40;&#103;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p>E-mail: <a href="mailto:&#x69;&#x6e;&#110;&#111;&#99;&#101;&#110;&#x63;&#101;&#54;&#x36;&#x37;&#55;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x69;&#x6e;&#110;&#111;&#99;&#101;&#110;&#x63;&#101;&#54;&#x36;&#x37;&#55;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
 <p>Twitter: <a target="_blank" rel="noopener" href="https://twitter.com/mavinci20">@mavinci20</a> <del>老号23年7月莫名其妙炸了气死我了</del></p>
 <p>Github: <a target="_blank" rel="noopener" href="https://github.com/Innocence667">Innocence_</a></p>
 </div>
@@ -197,6 +225,46 @@
 
     
         
+    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        以上。 
+    </div>
+    
+        
+
+    <div id="waline"></div>
+    <script type="module"  >
+        import { init } from 'https://npm.elemecdn.com/hexo-theme-a4@latest/source/js/waline.mjs'; 
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://vercel-waline-henna.vercel.app/',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+                search: false, // 禁止表情包搜索
+                reaction: false, // 对文章打分
+                pageview: false, // 浏览量统计
+                comment: false, // 评论数统计
+
+                locale: {
+                    placeholder: '留下你的评论吧。', 
+                    sofa: ''
+                },
+            });
+            
+        }
+        window.addEventListener('DOMContentLoaded', loadWaline);
+    </script>
+
+
+
+    
+    
+    
+    </div>
+
 
      
 </div>
@@ -230,7 +298,7 @@
 <!--这是指一条线往下的内容-->
 <div class="footer-last">
     
-            <span></span>
+            <span>花开堪折直须折，莫待无花空折枝。</span>
             
                 <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
             
